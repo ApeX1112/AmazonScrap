@@ -1,6 +1,7 @@
 from django.db import models
 import datetime
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 class product(models.Model):
@@ -14,7 +15,7 @@ class product(models.Model):
 
 class priceUpdate(models.Model):  #the price timeline of the product
     price=models.DecimalField(max_digits=9,decimal_places=2)
-    date=models.DateTimeField(default=datetime.datetime.now)
+    date=models.DateTimeField(default=timezone.now)
     productName=models.ForeignKey(product,on_delete=models.SET_NULL,null=True)
 
     def __str__(self) -> str:
