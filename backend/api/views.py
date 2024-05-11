@@ -8,6 +8,11 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 
 
+
+
+
+
+
 def home(request):
     q=request.GET.get('q')
     if q:
