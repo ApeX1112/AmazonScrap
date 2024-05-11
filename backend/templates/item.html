@@ -1,0 +1,12 @@
+<h1>item : </h1>
+<p>{{item.name}}</p>
+<h1>prices</h1>
+
+{%for price in prices%}
+<ul>
+    <li>
+        {{price.price}}
+        <p>{{price.date}}</p>
+    </li>
+</ul>
+{%endfor%}

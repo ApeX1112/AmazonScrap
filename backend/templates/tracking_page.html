@@ -1,0 +1,14 @@
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">track</button>
+</form>
+<hr>
+{%for item in trakedprods%}
+<ul>
+    <li>
+        <a href="{%url 'product' item.id %}">{{item.productname}}</a>
+    </li>
+</ul>
+
+{%endfor%}
